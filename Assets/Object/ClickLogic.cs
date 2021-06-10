@@ -8,22 +8,23 @@ public class ClickLogic : MonoBehaviour
     private float comboValue;
     private float points;
 
-    //private float[] array3 = {DefaultCircle, BadCircle};
-
     // gain point
-    public void DefaultCircle()
+    public void DefaultCircleScript()
     {
         points++;
         Debug.Log(points);
+        Destroy(DefaultCircle(UnityEngine.GameObject));
     }
 
     // Decrease life
     public void BadCircle()
     {
+        
         Debug.Log("points");
     }
 
     // Gain life
+
 
     // increase point gain for an amount of time
 
