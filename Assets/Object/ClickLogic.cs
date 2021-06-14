@@ -13,7 +13,7 @@ public class ClickLogic : MonoBehaviour
     {
         points++;
         Debug.Log(points);
-        Destroy(DefaultCircle(UnityEngine.GameObject));
+        //Destroy(DefaultCircle(UnityEngine.GameObject));
     }
 
     // Decrease life
