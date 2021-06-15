@@ -6,7 +6,7 @@ public class MouseMovement : MonoBehaviour
 {
     [Header("Mouse")]
     public GameObject MouseSprite;
-    public ClickLogic a;
+    public ClickLogic LogicScript;
     // Start is called before the first frame update
     void Start()
     {
@@ -26,7 +26,7 @@ public class MouseMovement : MonoBehaviour
             if (hit.collider != null) {
                 string objectHit = hit.collider.ToString();
                 objectHit = objectHit.Split(char.Parse(" "))[0];
-                a.Invoke(objectHit+"Script", 0f);
+                LogicScript.Invoke(objectHit+"Script", 0f);
                 Debug.Log(hit.collider);
                 Destroy(hit.collider.gameObject);
             }

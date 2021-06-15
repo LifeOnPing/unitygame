@@ -11,14 +11,15 @@ public class ClickLogic : MonoBehaviour
     // gain point
     public void DefaultCircleScript()
     {
-        points++;
+        comboValue++;
+        points+=comboValue;
         Debug.Log(points);
     }
 
     // Decrease life
     public void BadCircleScript()
     {
-        points--;
+        comboValue=0;
         Debug.Log(points);
     }
 
