@@ -27,7 +27,8 @@ public class MouseMovement : MonoBehaviour
                 string objectHit = hit.collider.ToString();
                 objectHit = objectHit.Split(char.Parse(" "))[0];
                 a.Invoke(objectHit+"Script", 0f);
-                Debug.Log(GameObject.Find(objectHit));
+                Debug.Log(hit.collider);
+                Destroy(hit.collider.gameObject);
             }
         }
         

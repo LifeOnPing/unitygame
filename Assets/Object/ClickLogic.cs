@@ -13,14 +13,13 @@ public class ClickLogic : MonoBehaviour
     {
         points++;
         Debug.Log(points);
-        //Destroy(DefaultCircle(UnityEngine.GameObject));
     }
 
     // Decrease life
-    public void BadCircle()
+    public void BadCircleScript()
     {
-        
-        Debug.Log("points");
+        points--;
+        Debug.Log(points);
     }
 
     // Gain life
