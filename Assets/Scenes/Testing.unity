@@ -305,7 +305,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   MouseSprite: {fileID: 625312109}
-  a: {fileID: 625312113}
+  LogicScript: {fileID: 625312113}
 --- !u!212 &625312111
 SpriteRenderer:
   m_ObjectHideFlags: 0
