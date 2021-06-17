@@ -186,7 +186,7 @@ PrefabInstance:
     - target: {fileID: 8239103030220575589, guid: 03c147b8000c8c24495a8b724d02807d,
         type: 3}
       propertyPath: m_Name
-      value: DefaultCircle
+      value: CircleDefault
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 03c147b8000c8c24495a8b724d02807d, type: 3}
@@ -368,7 +368,7 @@ Transform:
   m_LocalScale: {x: 0.5, y: 0.5, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 7
+  m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &625312113
 MonoBehaviour:
@@ -383,6 +383,85 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   healthValue: 0
+--- !u!1001 &699935426
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 8239103030220575585, guid: 03c147b8000c8c24495a8b724d02807d,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 8239103030220575585, guid: 03c147b8000c8c24495a8b724d02807d,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -0.78
+      objectReference: {fileID: 0}
+    - target: {fileID: 8239103030220575585, guid: 03c147b8000c8c24495a8b724d02807d,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.07
+      objectReference: {fileID: 0}
+    - target: {fileID: 8239103030220575585, guid: 03c147b8000c8c24495a8b724d02807d,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8239103030220575585, guid: 03c147b8000c8c24495a8b724d02807d,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8239103030220575585, guid: 03c147b8000c8c24495a8b724d02807d,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8239103030220575585, guid: 03c147b8000c8c24495a8b724d02807d,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8239103030220575585, guid: 03c147b8000c8c24495a8b724d02807d,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8239103030220575585, guid: 03c147b8000c8c24495a8b724d02807d,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8239103030220575585, guid: 03c147b8000c8c24495a8b724d02807d,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8239103030220575585, guid: 03c147b8000c8c24495a8b724d02807d,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8239103030220575586, guid: 03c147b8000c8c24495a8b724d02807d,
+        type: 3}
+      propertyPath: m_Color.b
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8239103030220575586, guid: 03c147b8000c8c24495a8b724d02807d,
+        type: 3}
+      propertyPath: m_Color.r
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8239103030220575589, guid: 03c147b8000c8c24495a8b724d02807d,
+        type: 3}
+      propertyPath: m_Name
+      value: CircleGood
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 03c147b8000c8c24495a8b724d02807d, type: 3}
 --- !u!1001 &800420127
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -448,7 +527,7 @@ PrefabInstance:
     - target: {fileID: 8239103030220575589, guid: 03c147b8000c8c24495a8b724d02807d,
         type: 3}
       propertyPath: m_Name
-      value: DefaultCircle
+      value: CircleDefault
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 03c147b8000c8c24495a8b724d02807d, type: 3}
@@ -517,7 +596,7 @@ PrefabInstance:
     - target: {fileID: 2400410961620146823, guid: 613a8e3b4b9e27e47b03b5c10e4e57ad,
         type: 3}
       propertyPath: m_Name
-      value: BadCircle
+      value: CircleBad
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 613a8e3b4b9e27e47b03b5c10e4e57ad, type: 3}
@@ -586,7 +665,7 @@ PrefabInstance:
     - target: {fileID: 8239103030220575589, guid: 03c147b8000c8c24495a8b724d02807d,
         type: 3}
       propertyPath: m_Name
-      value: DefaultCircle
+      value: CircleDefault
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 03c147b8000c8c24495a8b724d02807d, type: 3}
@@ -655,7 +734,7 @@ PrefabInstance:
     - target: {fileID: 8239103030220575589, guid: 03c147b8000c8c24495a8b724d02807d,
         type: 3}
       propertyPath: m_Name
-      value: DefaultCircle
+      value: CircleDefault
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 03c147b8000c8c24495a8b724d02807d, type: 3}
@@ -724,7 +803,7 @@ PrefabInstance:
     - target: {fileID: 8239103030220575589, guid: 03c147b8000c8c24495a8b724d02807d,
         type: 3}
       propertyPath: m_Name
-      value: DefaultCircle
+      value: CircleDefault
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 03c147b8000c8c24495a8b724d02807d, type: 3}

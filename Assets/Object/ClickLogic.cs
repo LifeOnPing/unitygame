@@ -4,27 +4,33 @@ using UnityEngine;
 
 public class ClickLogic : MonoBehaviour
 {
-    public float healthValue;
+    public int healthValue;
     private float comboValue;
     private float points;
 
     // gain point
-    public void DefaultCircleScript()
+    public void CircleDefaultScript()
     {
         comboValue++;
+        healthValue++;
         points+=comboValue;
-        Debug.Log(points);
+        Debug.Log(healthValue);
     }
 
     // Decrease life
-    public void BadCircleScript()
+    public void CircleBadScript()
     {
-        comboValue=0;
-        Debug.Log(points);
+        comboValue = 0;
+        healthValue /= 3;
+        Debug.Log(healthValue);
     }
 
     // Gain life
-
+    public void CircleGoodScript()
+    {
+        healthValue=50;
+        Debug.Log(healthValue);
+    }
 
     // increase point gain for an amount of time
 
