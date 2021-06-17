@@ -5,34 +5,44 @@ using UnityEngine;
 public class ClickLogic : MonoBehaviour
 {
     public int healthValue;
+    public int maxHealthValue;
+    private int comboBoost = 1;
     private float comboValue;
     private float points;
 
     // gain point
-    public void CircleDefaultScript()
+    public void CircleNeutralScript()
     {
         comboValue++;
+        points+=comboValue*comboBoost;
+        Debug.Log(points);
+
         healthValue++;
-        points+=comboValue;
-        Debug.Log(healthValue);
+        healthValue = Mathf.Clamp(healthValue, 0, maxHealthValue);
     }
 
     // Decrease life
-    public void CircleBadScript()
+    public void CircleNegativeScript()
     {
         comboValue = 0;
-        healthValue /= 3;
+        healthValue -= 40;
         Debug.Log(healthValue);
     }
 
     // Gain life
-    public void CircleGoodScript()
+    public void CirclePositiveScript()
     {
-        healthValue=50;
+        healthValue=maxHealthValue;
         Debug.Log(healthValue);
     }
 
     // increase point gain for an amount of time
+    public void CircleComboBoostScript()
+    {
+        comboBoost = 5;
+        Invoke("comboBoost = 1;", 5);
+    }
+
 
     // stop life drain for set period of time
 
