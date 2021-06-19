@@ -4,11 +4,16 @@ using UnityEngine;
 
 public class ClickLogic : MonoBehaviour
 {
+    [Header("Health Stuff")]
     public int healthValue;
     public int maxHealthValue;
-    private int comboBoost = 1;
-    private float comboValue;
-    private float points;
+
+    [Header("Points Stuff")]
+    public float points;
+    public float comboValue;
+    public float comboBoost;
+    public float comboBoostMultiplier;
+    public float comboBoostMultiplierTimer;
 
     // gain point
     public void CircleNeutralScript()
@@ -39,9 +44,9 @@ public class ClickLogic : MonoBehaviour
     // increase point gain for an amount of time
     public void CircleComboBoostScript()
     {
-        comboBoost = 5;
-        Invoke("comboBoost = 1;", 5);
-    }
+        comboBoost += comboBoostMultiplier;
+        Invoke("resetComboBoost", comboBoostMultiplierTimer);
+    } public void resetComboBoost() {comboBoost -= comboBoostMultiplier;}
 
 
     // stop life drain for set period of time
