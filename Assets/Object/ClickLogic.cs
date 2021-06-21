@@ -17,6 +17,9 @@ public class ClickLogic : MonoBehaviour
     public float comboBoostMultiplier;
     public float comboBoostMultiplierTimer;
 
+
+    public Transform cam;
+
     // gain point
     public void NeutralScript()
     {
@@ -60,5 +63,13 @@ public class ClickLogic : MonoBehaviour
 
 
     // Gain point but add distractions
+    /*public void camShakeScript()
+    {
+        //cam.Rotate(0,0,10);
+        //Debug.Log(cam.transform.rotation);
+        StartCoroutine();
 
+        cam.Rotate(0f,0f,1f);
+        
+    }*/
 }
