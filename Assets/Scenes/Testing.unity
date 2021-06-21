@@ -186,7 +186,7 @@ PrefabInstance:
     - target: {fileID: 8239103030220575589, guid: 03c147b8000c8c24495a8b724d02807d,
         type: 3}
       propertyPath: m_Name
-      value: CircleNeutral
+      value: Neutral
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 03c147b8000c8c24495a8b724d02807d, type: 3}
@@ -384,6 +384,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   healthValue: 100
   maxHealthValue: 100
+  healthMultiplier: 0
+  healthMultiplierTimer: 0
   points: 0
   comboValue: 0
   comboBoost: 1
@@ -454,7 +456,7 @@ PrefabInstance:
     - target: {fileID: 2400410961620146823, guid: 613a8e3b4b9e27e47b03b5c10e4e57ad,
         type: 3}
       propertyPath: m_Name
-      value: CircleNegative
+      value: Negative
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 613a8e3b4b9e27e47b03b5c10e4e57ad, type: 3}
@@ -523,7 +525,7 @@ PrefabInstance:
     - target: {fileID: 2400410961620146823, guid: 613a8e3b4b9e27e47b03b5c10e4e57ad,
         type: 3}
       propertyPath: m_Name
-      value: CircleNegative
+      value: Negative
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 613a8e3b4b9e27e47b03b5c10e4e57ad, type: 3}
@@ -592,7 +594,7 @@ PrefabInstance:
     - target: {fileID: 8239103030220575589, guid: 03c147b8000c8c24495a8b724d02807d,
         type: 3}
       propertyPath: m_Name
-      value: CircleNeutral
+      value: Neutral
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 03c147b8000c8c24495a8b724d02807d, type: 3}
@@ -661,7 +663,7 @@ PrefabInstance:
     - target: {fileID: 2400410961620146823, guid: 613a8e3b4b9e27e47b03b5c10e4e57ad,
         type: 3}
       propertyPath: m_Name
-      value: CircleNegative
+      value: Negative
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 613a8e3b4b9e27e47b03b5c10e4e57ad, type: 3}
@@ -730,7 +732,7 @@ PrefabInstance:
     - target: {fileID: 2400410961620146823, guid: 613a8e3b4b9e27e47b03b5c10e4e57ad,
         type: 3}
       propertyPath: m_Name
-      value: CircleNegative
+      value: Negative
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 613a8e3b4b9e27e47b03b5c10e4e57ad, type: 3}
@@ -799,7 +801,7 @@ PrefabInstance:
     - target: {fileID: 5993666315778353268, guid: 815a0b8910025d3478fb3d1ad9a6a5d6,
         type: 3}
       propertyPath: m_Name
-      value: CircleComboBoost
+      value: ComboBoost
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 815a0b8910025d3478fb3d1ad9a6a5d6, type: 3}
@@ -868,7 +870,7 @@ PrefabInstance:
     - target: {fileID: 5993666315778353268, guid: 815a0b8910025d3478fb3d1ad9a6a5d6,
         type: 3}
       propertyPath: m_Name
-      value: CircleComboBoost
+      value: ComboBoost
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 815a0b8910025d3478fb3d1ad9a6a5d6, type: 3}
@@ -937,7 +939,7 @@ PrefabInstance:
     - target: {fileID: 8239103030220575589, guid: 03c147b8000c8c24495a8b724d02807d,
         type: 3}
       propertyPath: m_Name
-      value: CircleNeutral
+      value: Neutral
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 03c147b8000c8c24495a8b724d02807d, type: 3}
@@ -1006,7 +1008,7 @@ PrefabInstance:
     - target: {fileID: 8239103030220575589, guid: 03c147b8000c8c24495a8b724d02807d,
         type: 3}
       propertyPath: m_Name
-      value: CircleNeutral
+      value: Neutral
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 03c147b8000c8c24495a8b724d02807d, type: 3}
@@ -1075,7 +1077,7 @@ PrefabInstance:
     - target: {fileID: 5993666315778353268, guid: 815a0b8910025d3478fb3d1ad9a6a5d6,
         type: 3}
       propertyPath: m_Name
-      value: CircleComboBoost
+      value: ComboBoost
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 815a0b8910025d3478fb3d1ad9a6a5d6, type: 3}
@@ -1089,7 +1091,7 @@ PrefabInstance:
     - target: {fileID: 3974245944010752017, guid: 509b73d443dca484787aacedaf374db2,
         type: 3}
       propertyPath: m_Name
-      value: CirclePositive
+      value: Positive
       objectReference: {fileID: 0}
     - target: {fileID: 3974245944010752021, guid: 509b73d443dca484787aacedaf374db2,
         type: 3}

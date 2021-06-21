@@ -7,6 +7,8 @@ public class ClickLogic : MonoBehaviour
     [Header("Health Stuff")]
     public int healthValue;
     public int maxHealthValue;
+    public int drainMultiplier;
+    public float healthMultiplierTimer;
 
     [Header("Points Stuff")]
     public float points;
@@ -16,10 +18,10 @@ public class ClickLogic : MonoBehaviour
     public float comboBoostMultiplierTimer;
 
     // gain point
-    public void CircleNeutralScript()
+    public void NeutralScript()
     {
         comboValue++;
-        points+=comboValue*comboBoost;
+        points += comboValue * comboBoost;
         Debug.Log(points);
 
         healthValue++;
@@ -27,22 +29,22 @@ public class ClickLogic : MonoBehaviour
     }
 
     // Decrease life
-    public void CircleNegativeScript()
+    public void NegativeScript()
     {
         comboValue = 0;
-        healthValue -= 40;
+        healthValue -= 40 * drainMultiplier;
         Debug.Log(healthValue);
     }
 
     // Gain life
-    public void CirclePositiveScript()
+    public void PositiveScript()
     {
-        healthValue=maxHealthValue;
+        healthValue = maxHealthValue;
         Debug.Log(healthValue);
     }
 
     // increase point gain for an amount of time
-    public void CircleComboBoostScript()
+    public void ComboBoostScript()
     {
         comboBoost += comboBoostMultiplier;
         Invoke("resetComboBoost", comboBoostMultiplierTimer);
@@ -50,6 +52,12 @@ public class ClickLogic : MonoBehaviour
 
 
     // stop life drain for set period of time
+    public void StarmanScript()
+    {
+        drainMultiplier = drainMultiplier-1;
+        Invoke("resetStarman", healthMultiplierTimer);
+    } public void resetStarman() {drainMultiplier++;}
+
 
     // Gain point but add distractions
 
