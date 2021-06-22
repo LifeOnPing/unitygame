@@ -4,20 +4,13 @@ using UnityEngine;
 
 public class test : MonoBehaviour
 {
+    
+
+    
     // Start is called before the first frame update
     void Start()
     {
-        // - After 0 seconds, prints "Starting 0.0"
-        // - After 0 seconds, prints "Before WaitAndPrint Finishes 0.0"
-        // - After 2 seconds, prints "WaitAndPrint 2.0"
-        print("Starting " + Time.time);
-
-        // Start function WaitAndPrint as a coroutine.
-
-        coroutine = WaitAndPrint(2.0f);
-        StartCoroutine(coroutine);
-
-        print("Before WaitAndPrint Finishes " + Time.time);
+        StartCoroutine(WaitAndPrint(1.0f));
     }
 
     // every 2 seconds perform the print()

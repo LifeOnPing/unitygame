@@ -63,13 +63,19 @@ public class ClickLogic : MonoBehaviour
 
 
     // Gain point but add distractions
-    /*public void camShakeScript()
+    public void camShakeScript()
     {
         //cam.Rotate(0,0,10);
         //Debug.Log(cam.transform.rotation);
-        StartCoroutine();
-
-        cam.Rotate(0f,0f,1f);
+        StartCoroutine(shake());
         
-    }*/
+    } private IEnumerator shake()
+    {
+        private startTime = time.Time;
+        while(startTime>time.Time+5f)
+        {
+            print("a");
+        }
+        
+    }
 }
