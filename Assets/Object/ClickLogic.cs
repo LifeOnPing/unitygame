@@ -67,18 +67,31 @@ public class ClickLogic : MonoBehaviour
     // Gain point but add distractions
     public Transform cam;
     public float startTime;
+    private float a;
+    private float b;
     public void camShakeScript()
     {
         //cam.Rotate(0,0,10);
         //Debug.Log(cam.transform.rotation);
         enabled = true;
         startTime = Time.time;
+        a=0;
         
     } void FixedUpdate()
     {
-        cam.transform.eulerAngles = new Vector3(0f, 0f, 5f*Mathf.Sin(5*(Time.time-startTime)));
+        a+= 0.1f;
+        b = Mathf.Sin(Mathf.PI*a);
+        cam.transform.eulerAngles = new Vector3(0f, 0f, b);
 
-        
+        print(a % 1);
+        print(a);
+        /*if(4 % 2 == 0){
+            print(a);
+        }*/
+
+
+
+
         if(startTime <= Time.time-3f){
             print(cam.transform.eulerAngles.z);
             cam.transform.eulerAngles = new Vector3(0f, 0f, 0f);
