@@ -1,4 +1,4 @@
-﻿using System.Collections;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -65,9 +65,11 @@ public class ClickLogic : MonoBehaviour
 
 
     // Gain point but add distractions
+    [Header("Camera Shake Variables")]
     public Transform cam;
-    public float startTime;
-    private float a;
+    public float shakeTime;
+    private float startTime;
+    private int a;
     private float b;
     public void camShakeScript()
     {
@@ -75,27 +77,19 @@ public class ClickLogic : MonoBehaviour
         //Debug.Log(cam.transform.rotation);
         enabled = true;
         startTime = Time.time;
-        a=0;
+        //a=0;
         
     } void FixedUpdate()
     {
-        a+= 0.1f;
-        b = Mathf.Sin(Mathf.PI*a);
+        a++;
+        b = 5*Mathf.Sin(Mathf.PI*a/10);
         cam.transform.eulerAngles = new Vector3(0f, 0f, b);
 
-        print(a % 1);
-        print(a);
-        /*if(4 % 2 == 0){
-            print(a);
-        }*/
-
-
-
-
-        if(startTime <= Time.time-3f){
+        if(startTime <= Time.time-shakeTime && a % 10 == 0){
             print(cam.transform.eulerAngles.z);
             cam.transform.eulerAngles = new Vector3(0f, 0f, 0f);
             enabled = false;
+            a=0;
         }
     }
 }
