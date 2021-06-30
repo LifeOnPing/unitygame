@@ -68,9 +68,12 @@ public class ClickLogic : MonoBehaviour
     [Header("Camera Shake Variables")]
     public Transform cam;
     public float shakeTime;
+    public float shakeIntensity;
+    public float shakeSpeed;
+
     private float startTime;
     private int a;
-    private float b;
+    private float camRotation;
     public void camShakeScript()
     {
         //cam.Rotate(0,0,10);
@@ -82,11 +85,10 @@ public class ClickLogic : MonoBehaviour
     } void FixedUpdate()
     {
         a++;
-        b = 5*Mathf.Sin(Mathf.PI*a/10);
-        cam.transform.eulerAngles = new Vector3(0f, 0f, b);
+        camRotation = shakeIntensity*Mathf.Sin(Mathf.PI*a/10*shakeSpeed);
+        cam.transform.eulerAngles = new Vector3(0f, 0f, camRotation);
 
-        if(startTime <= Time.time-shakeTime && a % 10 == 0){
-            print(cam.transform.eulerAngles.z);
+        if(startTime <= Time.time-shakeTime && a/10 % 10 == 0){
             cam.transform.eulerAngles = new Vector3(0f, 0f, 0f);
             enabled = false;
             a=0;
