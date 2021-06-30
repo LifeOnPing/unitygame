@@ -477,7 +477,9 @@ MonoBehaviour:
   comboBoostMultiplier: 2
   comboBoostMultiplierTimer: 5
   cam: {fileID: 519420032}
-  startTime: 0
+  shakeTime: 2
+  shakeIntensity: 2
+  shakeSpeed: 0.5
 --- !u!114 &625312114
 MonoBehaviour:
   m_ObjectHideFlags: 0
