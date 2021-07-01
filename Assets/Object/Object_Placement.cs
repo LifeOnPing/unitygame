@@ -10,11 +10,12 @@ public class Object_Placement : MonoBehaviour
     public GameObject Neutral;
     public GameObject Positive;
     public GameObject Starman;
-    Vector3[] NeutralPlacement = new[] {new Vector3(2f, 14f, 2f),
-                                        new Vector3(5f, 14f, 3f),
-                                        new Vector3(8f, 14f, 4f),
-                                        new Vector3(11f, 14f, 5f),
-                                        new Vector3(14f, 14f, 6f)};
+    Vector3[] NeutralPlacement = new[] {new Vector3(2f, 14f, 5f),
+                                        new Vector3(3f, 14f, 5.5f),
+                                        new Vector3(4f, 14f, 6f),
+                                        new Vector3(5f, 14f, 6.5f),
+                                        new Vector3(6f, 14f, 7f),
+                                        new Vector3(7f, 14f, 7.5f)};
                                                         
     //public float[] DistractionPlacementY = new float[] {1f,2f,3f};
     private int i;
