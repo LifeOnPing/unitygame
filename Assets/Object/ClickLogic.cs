@@ -74,7 +74,7 @@ public class ClickLogic : MonoBehaviour
     private float startTime;
     private int a;
     private float camRotation;
-    public void camShakeScript()
+    public void DistractionScript()
     {
         //cam.Rotate(0,0,10);
         //Debug.Log(cam.transform.rotation);
