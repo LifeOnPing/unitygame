@@ -10,12 +10,18 @@ public class Object_Placement : MonoBehaviour
     public GameObject Neutral;
     public GameObject Positive;
     public GameObject Starman;
-    Vector3[] NeutralPlacement = new[] {new Vector3(2f, 14f, 5f),
+    public Vector3[] NeutralPlacement = new[] {new Vector3(2f, 14f, 5f),
                                         new Vector3(3f, 14f, 5.5f),
                                         new Vector3(4f, 14f, 6f),
-                                        new Vector3(5f, 14f, 6.5f),
+                                        new Vector3(3.5f, 14f, 6.5f),
                                         new Vector3(6f, 14f, 7f),
                                         new Vector3(7f, 14f, 7.5f)};
+    /*Vector3[] NeutralPlacement = new[] {new Vector3(2f, 14f, 5f),
+                                        new Vector3(3f, 14f, 5.5f),
+                                        new Vector3(4f, 14f, 6f),
+                                        new Vector3(3.5f, 14f, 6.5f),
+                                        new Vector3(6f, 14f, 7f),
+                                        new Vector3(7f, 14f, 7.5f)};*/
                                                         
     //public float[] DistractionPlacementY = new float[] {1f,2f,3f};
     private int i;
@@ -24,12 +30,14 @@ public class Object_Placement : MonoBehaviour
     void Update()
     {
         
-        try{
+        //try{
         if(NeutralPlacement[i].z<=Time.time)
         {
-            Instantiate(Neutral, new Vector3(NeutralPlacement[i].x, NeutralPlacement[i].y, 0f), Quaternion.identity).name = "Neutral"; // wtf how does this work
+            Instantiate(Neutral, new Vector3(NeutralPlacement[i].x, NeutralPlacement[i].y, i/10000f), Quaternion.identity).name = "Neutral";
             i++;
-        }}catch {}
+            print(NeutralPlacement.Size);
+
+        }//}catch {}
         
 
     }
