@@ -4,42 +4,42 @@ using UnityEngine;
 
 public class Object_Placement : MonoBehaviour
 {
-    
-    public GameObject[] circle = new GameObject[] {};
-    public GameObject ComboBoost;
-    public GameObject Distraction;
-    public GameObject Negative;
-    public GameObject Neutral;
-    public GameObject Positive;
-    public GameObject Starman;
+    [Header("Circle Types")]
+    public GameObject[] CircleTypes;
 
-    private int ComboBoostArrayPos;
-    private int DistractionArrayPos;
-    private int NegativeArrayPos;
-    private int NeutralArrayPos;
-    private int PositiveArrayPos;
-    private int StarmanArrayPos;
+    private int[] ArrayPos;
 
-    public Vector3[] ComboBoostPlacement = new Vector3[] {new Vector3(0f, 0f, 0f)};
-    public Vector3[] DistractionPlacement = new Vector3[] {new Vector3(0f, 0f, 0f)};
-    public Vector3[] NegativePlacement = new Vector3[] {new Vector3(0f, 0f, 0f)};
-    public Vector3[] NeutralPlacement = new Vector3[] {new Vector3(0f, 0f, 0f)};
-    public Vector3[] PositivePlacement = new Vector3[] {new Vector3(0f, 0f, 0f)};
-    public Vector3[] StarmanPlacement = new Vector3[] {new Vector3(0f, 0f, 0f)};
-                                                        
-    //public float[] DistractionPlacementY = new float[] {1f,2f,3f};
+    public Vector3[] ComboBoostPlacement;
+    public Vector3[] DistractionPlacement;
+    public Vector3[] NegativePlacement;
+    public Vector3[] NeutralPlacement;
+    public Vector3[] PositivePlacement;
+    public Vector3[] StarmanPlacement;
+
+    private GameObject circle;
+    private int Pos;
     
+    void Start()
+    {
+        ArrayPos = new int[CircleTypes.Length];
+    }
+
     void Update()
     {
         
-        
-        if( NeutralPlacement.Length != NeutralArrayPos &&
-            NeutralPlacement[NeutralArrayPos].z<=Time.time) {
-            Instantiate(Neutral, new Vector3(   NeutralPlacement[NeutralArrayPos].x,
-                                                NeutralPlacement[NeutralArrayPos].y,
-                                                NeutralArrayPos/10000f),
-                                                Quaternion.identity).name = "Neutral";
-            NeutralArrayPos++;
+        while(Array.Length != Pos)
+        {
+            if( NeutralPlacement.Length != ArrayPos[0] &&
+                NeutralPlacement[ArrayPos[0]].z<=Time.time) {
+                circle = (GameObject)Instantiate(CircleTypes[0], new Vector3(   NeutralPlacement[ArrayPos[0]].x,
+                                                    NeutralPlacement[ArrayPos[0]].y,
+                                                    ArrayPos[0]/10000f),
+                                                    Quaternion.identity);
+                circle.name = "Neutral";
+                Destroy(circle, 2f);
+                ArrayPos[0]++;
+            }
+            Pos++;
         }
         
 
