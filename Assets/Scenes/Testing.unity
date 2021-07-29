@@ -245,17 +245,16 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   CircleTypes:
-  - {fileID: 8239103030220575589, guid: 03c147b8000c8c24495a8b724d02807d, type: 3}
+  - {fileID: 0}
+  - {fileID: 0}
   ArrayPos: 
-  ComboBoostPlacement: []
-  DistractionPlacement: []
+  ComboBoostPlacement:
+  - {x: 0, y: 1, z: 2}
+  DistractionPlacement:
+  - {x: 3, y: 4, z: 5}
+  - {x: 6, y: 7, z: 8}
   NegativePlacement: []
-  NeutralPlacement:
-  - {x: 2, y: 16, z: 1}
-  - {x: 3, y: 16, z: 1.5}
-  - {x: 4, y: 16, z: 2}
-  - {x: 5, y: 16, z: 2.5}
-  - {x: 6, y: 16, z: 3}
+  NeutralPlacement: []
   PositivePlacement: []
   StarmanPlacement: []
 --- !u!20 &519420031
