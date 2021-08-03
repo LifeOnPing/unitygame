@@ -22,6 +22,7 @@ public class Object_Placement : MonoBehaviour
 
     private GameObject circle;
     private int Pos;
+    private int CirclePosition;
     
     void Start()
     {
@@ -37,21 +38,23 @@ public class Object_Placement : MonoBehaviour
 
     void Update()
     {
-        while(NeutralPlacement.Length != Pos)           look at arkive and fix this
+        //print(CircleTypes[0]);
+        while(CircleTypes.Length != Pos)            add fps counter
         {
-        print("PlacementArray[1][5].x");
-            if( NeutralPlacement.Length != ArrayPos[0] &&
-                NeutralPlacement[ArrayPos[0]].z<=Time.time) {
-                circle = (GameObject)Instantiate(CircleTypes[0], new Vector3(   NeutralPlacement[ArrayPos[0]].x,
-                                                    NeutralPlacement[ArrayPos[0]].y,
-                                                    ArrayPos[0]/10000f),
+            if( PlacementArray[Pos].Length != ArrayPos[Pos] &&
+                PlacementArray[Pos][ArrayPos[Pos]].z<=Time.time)
+            {
+                circle = (GameObject)Instantiate(   CircleTypes[Pos], new Vector3(   PlacementArray[Pos][ArrayPos[Pos]].x,
+                                                    PlacementArray[Pos][ArrayPos[Pos]].y,
+                                                    CirclePosition/10000f),
                                                     Quaternion.identity);
-                circle.name = "Neutral";
+                circle.name = circle.name.Split(char.Parse("("))[0];
                 Destroy(circle, 2f);
-                ArrayPos[0]++;
+                ArrayPos[Pos]++;
+                CirclePosition++;
             }
             Pos++;
-        }
+        } Pos = 0;
         
 
     }

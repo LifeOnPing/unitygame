@@ -253,8 +253,10 @@ MonoBehaviour:
   - {fileID: 2804270420176080030, guid: 5ad1cc7816b20314e8b70b6d2b65358b, type: 3}
   ArrayPos: 
   ComboBoostPlacement: []
-  DistractionPlacement: []
-  NegativePlacement: []
+  DistractionPlacement:
+  - {x: 2, y: 15, z: 2}
+  NegativePlacement:
+  - {x: 2.5, y: 14, z: 1.5}
   NeutralPlacement:
   - {x: 2, y: 15, z: 1}
   - {x: 3, y: 15, z: 2}
