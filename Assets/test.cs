@@ -1,20 +1,25 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.UI;
+using System.Linq;
 
 public class test : MonoBehaviour
 {
-    public Text display_Text;
-    private int h;
+    public Object_Placement ObjectPlacement;
+    public Vector3[] ObjectPlaceholder;
 
     void Update()
     {
-        h = (int)(1f / Time.unscaledDeltaTime);
-    }
-    void FixedUpdate()
-    {
-        display_Text.text = h.ToString();
+        if(Input.GetAxis("One") == 1)
+        {
+            Vector3 mousePos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+            
+            
+
+            ObjectPlaceholder.Add(mousePos.x, mousePos.y, ObjectPlaceholder.Length);        add to placement array
+            ObjectPlaceholder = ObjectPlaceholder.Select().ToArray();
+            //ObjectPlacement.ComboBoostPlacement = ObjectPlaceholder;
+        }
     }
 
 }

@@ -21,6 +21,7 @@ public class Object_Placement : MonoBehaviour
     //Vector3 = new int[20][];
 
     private GameObject circle;
+    private GameObject circlePlace;
     private int Pos;
     private int CirclePosition;
     
@@ -54,10 +55,5 @@ public class Object_Placement : MonoBehaviour
             }
             Pos++;
         } Pos = 0;
-        
-        if() make object placements
-        {
-            Vector3 mousePos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
-        }
     }
 }

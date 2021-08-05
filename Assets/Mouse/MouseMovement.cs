@@ -7,13 +7,12 @@ public class MouseMovement : MonoBehaviour
     [Header("Mouse")]
     public GameObject MouseSprite;
     public ClickLogic LogicScript;
-    // Start is called before the first frame update
+    
     void Start()
     {
         Cursor.visible = false;
     }
 
-    // Update is called once per frame
     void Update()
     {
         MouseSprite.transform.position = Camera.main.ScreenToWorldPoint(Input.mousePosition)+new Vector3(0f, 0f, 1f);
@@ -32,10 +31,4 @@ public class MouseMovement : MonoBehaviour
         }
         
     }
-    /*private IEnumerator WaitAndPrint(GameObject asdf)
-    {
-        yield return new WaitForSeconds(2f);
-        Destroy(asdf);
-        
-    }*/
 }
