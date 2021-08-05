@@ -1,26 +1,20 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class test : MonoBehaviour
 {
-    
+    public Text display_Text;
+    private int h;
 
-    
-    // Start is called before the first frame update
-    void Start()
+    void Update()
     {
-        StartCoroutine(WaitAndPrint(1.0f));
+        h = (int)(1f / Time.unscaledDeltaTime);
     }
-
-    // every 2 seconds perform the print()
-    private IEnumerator WaitAndPrint(float waitTime)
+    void FixedUpdate()
     {
-        while (true)
-        {
-            yield return new WaitForSeconds(waitTime);
-            print("WaitAndPrint " + Time.time);
-        }
+        display_Text.text = h.ToString();
     }
 
 }

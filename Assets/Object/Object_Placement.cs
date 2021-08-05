@@ -7,7 +7,7 @@ public class Object_Placement : MonoBehaviour
     [Header("Circle Types")]
     public GameObject[] CircleTypes;
 
-    public int[] ArrayPos;
+    private int[] ArrayPos;
 
     [Header("Circle Placement")]
     public Vector3[] ComboBoostPlacement;
@@ -38,8 +38,7 @@ public class Object_Placement : MonoBehaviour
 
     void Update()
     {
-        //print(CircleTypes[0]);
-        while(CircleTypes.Length != Pos)            add fps counter
+        while(CircleTypes.Length != Pos)
         {
             if( PlacementArray[Pos].Length != ArrayPos[Pos] &&
                 PlacementArray[Pos][ArrayPos[Pos]].z<=Time.time)
@@ -56,6 +55,9 @@ public class Object_Placement : MonoBehaviour
             Pos++;
         } Pos = 0;
         
-
+        if() make object placements
+        {
+            Vector3 mousePos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+        }
     }
 }

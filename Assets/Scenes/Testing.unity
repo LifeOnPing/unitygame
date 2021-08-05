@@ -251,16 +251,10 @@ MonoBehaviour:
   - {fileID: 8239103030220575589, guid: 03c147b8000c8c24495a8b724d02807d, type: 3}
   - {fileID: 3974245944010752017, guid: 509b73d443dca484787aacedaf374db2, type: 3}
   - {fileID: 2804270420176080030, guid: 5ad1cc7816b20314e8b70b6d2b65358b, type: 3}
-  ArrayPos: 
   ComboBoostPlacement: []
-  DistractionPlacement:
-  - {x: 2, y: 15, z: 2}
-  NegativePlacement:
-  - {x: 2.5, y: 14, z: 1.5}
-  NeutralPlacement:
-  - {x: 2, y: 15, z: 1}
-  - {x: 3, y: 15, z: 2}
-  - {x: 4, y: 15, z: 3}
+  DistractionPlacement: []
+  NegativePlacement: []
+  NeutralPlacement: []
   PositivePlacement: []
   StarmanPlacement: []
 --- !u!20 &519420031
@@ -455,6 +449,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 69017e0d40f285948902755fff77fa39, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  display_Text: {fileID: 0}
 --- !u!1001 &791363932
 PrefabInstance:
   m_ObjectHideFlags: 0
