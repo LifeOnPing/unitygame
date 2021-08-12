@@ -251,7 +251,11 @@ MonoBehaviour:
   - {fileID: 8239103030220575589, guid: 03c147b8000c8c24495a8b724d02807d, type: 3}
   - {fileID: 3974245944010752017, guid: 509b73d443dca484787aacedaf374db2, type: 3}
   - {fileID: 2804270420176080030, guid: 5ad1cc7816b20314e8b70b6d2b65358b, type: 3}
-  ComboBoostPlacement: []
+  ComboBoostPlacement:
+  - {x: 6.06135, y: 12.97546, z: 1}
+  - {x: 9.539877, y: 12.03681, z: 1.5}
+  - {x: 17.04908, y: 16.177914, z: 2}
+  - {x: 23.177914, y: 13.141104, z: 2.5}
   DistractionPlacement: []
   NegativePlacement: []
   NeutralPlacement: []
@@ -450,6 +454,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ObjectPlacement: {fileID: 519420030}
+  ObjectPlaceholder: []
+  counter: 1
+  BeatsPerMinute: 120
 --- !u!1001 &791363932
 PrefabInstance:
   m_ObjectHideFlags: 0
