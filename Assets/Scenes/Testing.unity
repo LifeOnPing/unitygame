@@ -217,6 +217,7 @@ GameObject:
   - component: {fileID: 519420031}
   - component: {fileID: 519420029}
   - component: {fileID: 519420030}
+  - component: {fileID: 519420033}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -252,10 +253,9 @@ MonoBehaviour:
   - {fileID: 3974245944010752017, guid: 509b73d443dca484787aacedaf374db2, type: 3}
   - {fileID: 2804270420176080030, guid: 5ad1cc7816b20314e8b70b6d2b65358b, type: 3}
   ComboBoostPlacement:
-  - {x: 6.06135, y: 12.97546, z: 1}
-  - {x: 9.539877, y: 12.03681, z: 1.5}
-  - {x: 17.04908, y: 16.177914, z: 2}
-  - {x: 23.177914, y: 13.141104, z: 2.5}
+  - {x: 5.1226997, y: 14.576687, z: 1}
+  - {x: 9.760736, y: 11.760736, z: 1.375}
+  - {x: 12.687117, y: 10.98773, z: 1.75}
   DistractionPlacement: []
   NegativePlacement: []
   NeutralPlacement: []
@@ -318,6 +318,18 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &519420033
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 519420028}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 74fe5c2206f8d424db169b73442fca3d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &625312109
 GameObject:
   m_ObjectHideFlags: 0
@@ -456,7 +468,7 @@ MonoBehaviour:
   ObjectPlacement: {fileID: 519420030}
   ObjectPlaceholder: []
   counter: 1
-  BeatsPerMinute: 120
+  BeatsPerMinute: 160
 --- !u!1001 &791363932
 PrefabInstance:
   m_ObjectHideFlags: 0

@@ -18,7 +18,7 @@ public class test : MonoBehaviour
 
     void Update()
     {
-        if(Input.GetAxis("One") == 1)
+        if(Input.GetKey("1"))
         {
             Vector3 mousePos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
             
