@@ -12,7 +12,7 @@ public class RuntimeText: MonoBehaviour
         string path = Directory.GetCurrentDirectory() + "/Assets/Beatmaps";
         Directory.CreateDirectory(path);
         path += "/lvl.txt";
-        System.Windows.Forms.MessageBox.Show("My message here");  make it use the save as prompt
+        //System.Windows.Forms.MessageBox.Show("My message here");
 
 
         //Write some text to the test.txt file
@@ -34,5 +34,12 @@ public class RuntimeText: MonoBehaviour
         StreamReader reader = new StreamReader(path);
         Debug.Log(reader.ReadToEnd());
         reader.Close();
+    }
+
+    [MenuItem("Tools/Test")]
+    public static void Test()
+    {
+        string path = EditorUtility.OpenFolderPanel("Overwrite with png", "", "");
+        print(path);
     }
 }
