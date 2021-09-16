@@ -6,7 +6,9 @@ using System.IO;
 
 public class RuntimeText: MonoBehaviour
 {
-    [MenuItem("Tools/Write file")]
+    public Object_Placement ObjectPlacement;
+
+    /*[MenuItem("Tools/Write file")]
     public static void WriteString()
     {
         string path = Directory.GetCurrentDirectory() + "/Assets/Beatmaps";
@@ -34,12 +36,16 @@ public class RuntimeText: MonoBehaviour
         StreamReader reader = new StreamReader(path);
         Debug.Log(reader.ReadToEnd());
         reader.Close();
-    }
+    }*/
 
     [MenuItem("Tools/Test")]
     public static void Test()
     {
-        string path = EditorUtility.OpenFolderPanel("Overwrite with png", "", "");
+        string path = EditorUtility.OpenFolderPanel("Save map", "", "");
         print(path);
+        path += "/lvl.txt";
+        StreamWriter writer = new StreamWriter(path, true);
+        writer.WriteLine((float)ObjectPlacement.ComboBoostPlacement[0].x);
+        writer.Close();
     }
 }
