@@ -253,9 +253,10 @@ MonoBehaviour:
   - {fileID: 3974245944010752017, guid: 509b73d443dca484787aacedaf374db2, type: 3}
   - {fileID: 2804270420176080030, guid: 5ad1cc7816b20314e8b70b6d2b65358b, type: 3}
   ComboBoostPlacement:
-  - {x: 5.1226997, y: 14.576687, z: 1}
-  - {x: 9.760736, y: 11.760736, z: 1.375}
-  - {x: 12.687117, y: 10.98773, z: 1.75}
+  - {x: 3.1349697, y: 15.239264, z: 1}
+  - {x: 9.705523, y: 13.141104, z: 1.375}
+  - {x: 12.079755, y: 15.294478, z: 1.75}
+  - {x: 18.042946, y: 13.472393, z: 2.125}
   DistractionPlacement: []
   NegativePlacement: []
   NeutralPlacement: []

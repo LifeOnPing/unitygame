@@ -1,6 +1,8 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEditor;
+using System.IO;
 
 public class Object_Placement : MonoBehaviour
 {
@@ -56,4 +58,15 @@ public class Object_Placement : MonoBehaviour
             Pos++;
         } Pos = 0;
     }
+/*
+    [MenuItem("Tools/Test")]
+    public static void Test()
+    {
+        string path = EditorUtility.OpenFolderPanel("Save map", "", "");
+        print(path);
+        path += "/lvl.txt";
+        StreamWriter writer = new StreamWriter(path, true);
+        writer.WriteLine(ComboBoostPlacement[0].x);
+        writer.Close();
+    }*/
 }

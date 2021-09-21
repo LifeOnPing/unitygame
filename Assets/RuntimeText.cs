@@ -36,7 +36,7 @@ public class RuntimeText: MonoBehaviour
         StreamReader reader = new StreamReader(path);
         Debug.Log(reader.ReadToEnd());
         reader.Close();
-    }*/
+    }
 
     [MenuItem("Tools/Test")]
     public static void Test()
@@ -47,5 +47,5 @@ public class RuntimeText: MonoBehaviour
         StreamWriter writer = new StreamWriter(path, true);
         writer.WriteLine((float)ObjectPlacement.ComboBoostPlacement[0].x);
         writer.Close();
-    }
+    }*/
 }
