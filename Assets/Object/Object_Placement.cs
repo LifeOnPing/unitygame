@@ -60,14 +60,27 @@ public class Object_Placement : MonoBehaviour
     }
     public void SaveMap()
     {
+        Cursor.visible = true;
         string path = EditorUtility.OpenFolderPanel("Save map", "", "");
         print(path);
-        path += "/lvl.txt";
-        StreamWriter writer = new StreamWriter(path, true);
-        for(int i=0; i!=ComboBoostPlacement.Length; i++)
+        if(path != "")
         {
-            writer.WriteLine(ComboBoostPlacement[i]);
+            path += "/lvl.txt";
+            if(System.IO.File.Exists(path))
+            {
+                if(EditorUtility.DisplayDialog("string title", "string message", "string ok", "owo"))
+                {
+                    decide when to print print/override file
+                }
+            }
+            StreamWriter writer = new StreamWriter(path, true);
+            for(int i=0; i!=ComboBoostPlacement.Length; i++)
+            {
+                writer.WriteLine(ComboBoostPlacement[i]);
+            }
+            writer.Close();
         }
-        writer.Close();
+        Cursor.visible = false;
+        
     }
 }
