@@ -66,19 +66,25 @@ public class Object_Placement : MonoBehaviour
         if(path != "")
         {
             path += "/lvl.txt";
+            bool a = true;
             if(System.IO.File.Exists(path))
             {
-                if(EditorUtility.DisplayDialog("string title", "string message", "string ok", "owo"))
+                if(!EditorUtility.DisplayDialog("Warning", "string message", "Override save", "Cancel"))
                 {
-                    decide when to print print/override file
+                    do here
+                } else{
+                    a = false;
                 }
             }
-            StreamWriter writer = new StreamWriter(path, true);
-            for(int i=0; i!=ComboBoostPlacement.Length; i++)
+            if(a)
             {
-                writer.WriteLine(ComboBoostPlacement[i]);
+                StreamWriter writer = new StreamWriter(path, true);
+                for(int i=0; i!=ComboBoostPlacement.Length; i++)
+                {
+                    writer.WriteLine(ComboBoostPlacement[i]);
+                }
+                writer.Close();
             }
-            writer.Close();
         }
         Cursor.visible = false;
         
