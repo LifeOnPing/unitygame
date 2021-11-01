@@ -61,17 +61,16 @@ public class Object_Placement : MonoBehaviour
     public void SaveMap()
     {
         Cursor.visible = true;
-        string path = EditorUtility.OpenFolderPanel("Save map", "", "");
+        string path = EditorUtility.SaveFilePanel("Save map", "", "lmao" + ".txt", "txt");
         print(path);
         if(path != "")
         {
-            path += "/lvl.txt";
             bool a = true;
             if(System.IO.File.Exists(path))
             {
-                if(!EditorUtility.DisplayDialog("Warning", "string message", "Override save", "Cancel"))
+                if(EditorUtility.DisplayDialog("Warning", "string message", "Override save", "Cancel"))
                 {
-                    do here
+                    File.Delete(path);
                 } else{
                     a = false;
                 }
