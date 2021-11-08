@@ -61,14 +61,14 @@ public class Object_Placement : MonoBehaviour
     public void SaveMap()
     {
         Cursor.visible = true;
-        string path = EditorUtility.SaveFilePanel("Save map", "", "lmao" + ".txt", "txt");
-        print(path);
+        string path = EditorUtility.SaveFilePanel("Save map", "", "Map Name", "");
+        
         if(path != "")
         {
             bool a = true;
             if(System.IO.File.Exists(path))
             {
-                if(EditorUtility.DisplayDialog("Warning", "string message", "Override save", "Cancel"))
+                if(EditorUtility.DisplayDialog("Warning", "Game file already exists.", "Override save", "Cancel"))
                 {
                     File.Delete(path);
                 } else{
@@ -77,12 +77,18 @@ public class Object_Placement : MonoBehaviour
             }
             if(a)
             {
-                StreamWriter writer = new StreamWriter(path, true);
-                for(int i=0; i!=ComboBoostPlacement.Length; i++)
+                Directory.CreateDirectory(path);
+                for(int counter=0; counter!=CircleTypes.Length; counter++)
                 {
-                    writer.WriteLine(ComboBoostPlacement[i]);
+                    StreamWriter writer = new StreamWriter(path + "/" + CircleTypes[counter] + ".txt", true);
+                    for(int i=0; i!=PlacementArray[counter].Length; i++)
+                    {
+                        writer.WriteLine(PlacementArray[counter][i]);
+                    }
+                    writer.Close();
                 }
-                writer.Close();
+
+
             }
         }
         Cursor.visible = false;
