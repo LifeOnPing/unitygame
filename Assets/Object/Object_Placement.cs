@@ -58,7 +58,7 @@ public class Object_Placement : MonoBehaviour
             Pos++;
         } Pos = 0;
     }
-    public void SaveMap()
+    /*public void SaveMap()
     {
         Cursor.visible = true;
         string path = EditorUtility.SaveFilePanel("Save map", "", "Map Name", "");
@@ -93,5 +93,5 @@ public class Object_Placement : MonoBehaviour
         }
         Cursor.visible = false;
         
-    }
+    }*/
 }
