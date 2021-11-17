@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using TMPro;
 
 public class ClickLogic : MonoBehaviour
 {
@@ -16,6 +17,11 @@ public class ClickLogic : MonoBehaviour
     public float comboBoost;
     public float comboBoostMultiplier;
     public float comboBoostMultiplierTimer;
+
+    public TextMeshPro HealthTextBox;
+    public TextMeshPro ScoreTextBox;
+    public TextMeshPro ComboTextBox;
+
     
     void Start()
     {
@@ -31,6 +37,10 @@ public class ClickLogic : MonoBehaviour
 
         healthValue++;
         healthValue = Mathf.Clamp(healthValue, 0, maxHealthValue);
+
+        HealthTextBox.text = healthValue.ToString();
+        ScoreTextBox.text = points.ToString();
+        ComboTextBox.text = comboValue.ToString();
     }
 
     // Decrease life
@@ -39,6 +49,10 @@ public class ClickLogic : MonoBehaviour
         comboValue = 0;
         healthValue -= 40 * drainMultiplier;
         Debug.Log(healthValue);
+
+        HealthTextBox.text = healthValue.ToString();
+        ScoreTextBox.text = points.ToString();
+        ComboTextBox.text = comboValue.ToString();
     }
 
     // Gain life
@@ -46,6 +60,10 @@ public class ClickLogic : MonoBehaviour
     {
         healthValue = maxHealthValue;
         Debug.Log(healthValue);
+
+        HealthTextBox.text = healthValue.ToString();
+        ScoreTextBox.text = points.ToString();
+        ComboTextBox.text = comboValue.ToString();
     }
 
     // increase point gain for an amount of time
@@ -53,6 +71,10 @@ public class ClickLogic : MonoBehaviour
     {
         comboBoost += comboBoostMultiplier;
         Invoke("resetComboBoost", comboBoostMultiplierTimer);
+
+        HealthTextBox.text = healthValue.ToString();
+        ScoreTextBox.text = points.ToString();
+        ComboTextBox.text = comboValue.ToString();
     } public void resetComboBoost() {comboBoost -= comboBoostMultiplier;}
 
 
@@ -61,6 +83,10 @@ public class ClickLogic : MonoBehaviour
     {
         drainMultiplier = drainMultiplier-1;
         Invoke("resetStarman", healthMultiplierTimer);
+
+        HealthTextBox.text = healthValue.ToString();
+        ScoreTextBox.text = points.ToString();
+        ComboTextBox.text = comboValue.ToString();
     } public void resetStarman() {drainMultiplier++;}
 
 
